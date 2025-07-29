@@ -1,0 +1,294 @@
+/* Reset styles */
+* {
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+/* Background image behind all content */
+.background-image {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.9; /* subtle dim */
+  pointer-events: none; /* so clicks pass through */
+}
+
+/* Header styles */
+header {
+  background-color: #fff;
+  padding: 1rem 5%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 10; /* higher than background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo h2 {
+  color: rgb(65, 199, 199);
+  font-weight: 700;
+  font-size: 1.6rem;
+  user-select: none;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  color: #394136f7;
+  padding: 6rem 10%;
+  position: relative;
+  z-index: 5;
+  min-height: 80vh;
+  align-items: center;
+  background: transparent;
+}
+
+.hero-content {
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+  color: rgb(0, 0, 0);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.learn-more,
+#askchat {
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  font-weight: 600;
+  user-select: none;
+}
+
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(224, 224, 224, 0);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 8% auto;
+  padding: 30px;
+  border: 1px solid #03c8f4;
+  width: 500px;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(12, 132, 196, 0.3);
+  position: relative;
+}
+
+.close-button {
+  color: #00aeff;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: rgb(215, 13, 13);
+  text-decoration: none;
+}
+
+/* Search container inside modal */
+.search-container {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.75rem 3rem 0.75rem 1rem; /* space for icons */
+  font-size: 1rem;
+  border: 1px solid #00d0f5;
+  border-radius: 50px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-container input:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+}
+
+/* Ask chatbot button */
+.ask-container {
+  background-color: #ffffff;
+  border-radius:100px;
+  position: fixed;
+  right: 540px;
+  top: 38.9%;
+  transform: translateY(-55%);
+  display: flex;
+  
+}
+
+/* Response text */
+.response {
+  margin-top: 4rem;
+  padding: 1rem;
+  background-color: #7eeaec34;
+  border-radius: 6px;
+  color: #020202;
+  font-size: 1rem;
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 5%;
+    min-height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

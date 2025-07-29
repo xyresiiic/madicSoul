@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Doctors - CURE CONNECT</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+  <img id="doctbc" src="/static/images/doctbc.jpg" alt="Doctor background image" />
+  <header>
+    <nav>
+      <div class="logo">
+      <!--img src="/static/images/logo1.jpg" alt="Medic Logo" /-->
+      <h2>MEDIC SOUL</h2>
+    </div> 
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="govt_scheme.html">Govt. Scheme</a></li>
+        <li><a href="doctor.html">Doctor</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="card">
+        <img src="/static/images/vipul.jpg" alt="Doctor Vipul Agarwal" class="card-img" width="50%" />
+        <div class="card-content">
+          <h2 class="card-title">Dr. Vipul Agarwal (Physician)</h2>
+          <a href="#" class="card-btn learnMoreBtn">Contact Here</a>
+          <div class="card-details" style="display: none;">
+            <p>Email: vipulagrawal@example.com</p>
+            <p>Phone: +91 8902983293</p>
+            <p>Address: F-154 next to JDA community hall, near DAV Centenary public school, Vaishali Nagar, Jaipur, Rajasthan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/static/images/suresh kumar.jpg" alt="Doctor Suresh Kumar Yogi" class="card-img" width="50%" />
+        <div class="card-content">
+          <h2 class="card-title">Dr. Suresh Kumar Yogi (Chest Physician)</h2>
+          <a href="#" class="card-btn learnMoreBtn">Contact Here</a>
+          <div class="card-details" style="display: none;">
+            <p>Email: sureshkyogi@example.com</p>
+            <p>Phone: +91 9079256064</p>
+            <p>Address: B 63, Kalwar Road, Manglam City Jhotwara, Hathod, Jaipur, Rajasthan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/static/images/sumit.jpg" alt="Doctor Sumit Bochiwal" class="card-img" width="50%" />
+        <div class="card-content">
+          <h2 class="card-title">Dr. Sumit Bochiwal (General Physician)</h2>
+          <a href="#" class="card-btn learnMoreBtn">Contact Here</a>
+          <div class="card-details" style="display: none;">
+            <p>Email: sumitbochiwala@example.com</p>
+            <p>Phone: +91 8046961837</p>
+            <p>Address: SGK Hospital and Research Centre, 205 Kalwar Road, Opp. Vihar, Jhotwara, Jaipur, Rajasthan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/static/images/dr.suresh Nitharwal.jpg" alt="Doctor Suresh Nitharwal" class="card-img" width="50%" />
+        <div class="card-content">
+          <h2 class="card-title">Dr. Suresh Nitharwal (General Physician)</h2>
+          <a href="#" class="card-btn learnMoreBtn">Contact Here</a>
+          <div class="card-details" style="display: none;">
+            <p>Email: nitharwalduresh@example.com</p>
+            <p>Phone: +91 7737202709</p>
+            <p>Address: 15 Manglam Marg, Kalwar Road, near Hotel Krishnam Palace, Manglam City, Bajrang Colony, Jaipur, Rajasthan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/static/images/gDoc1.jpg" alt="Coming Soon Doctor" class="card-img" width="50%" />
+        <div class="card-content">
+          <h2 class="card-title">Dr. Emaa Benderson (Cardio expert)</h2>
+          <a href="#" class="card-btn learnMoreBtn">Contact Here</a>
+          <div class="card-details" style="display: none;">
+            <p>Email: emmabenderson@example.com</p>
+            <p>Phone: +12 8359653214</p>
+            <p>Address: 7/81 Sediks recidence,new york</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/static/images/do3.jpg" alt="Coming Soon Doctor" class="card-img" width="50%" />
+        <div class="card-content">
+          <h2 class="card-title">Dr. Ravindra Sharama (Physician)</h2>
+          <a href="#" class="card-btn learnMoreBtn">Contact Here</a>
+          <div class="card-details" style="display: none;">
+            <p>Email: sharamaravindra@example.com</p>
+            <p>Phone: +91 6315429829</p>
+            <p>Address: 15 Govind nagar, near marharaja palace hotel, modal town,Jaipur, Rajasthan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.learnMoreBtn');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        const details = this.nextElementSibling;
+        if (details.style.display === 'none' || details.style.display === '') {
+          details.style.display = 'block';
+        } else {
+          details.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
